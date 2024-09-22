@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TP01.MainPage"
+             BackgroundColor="#f0f0f0">
+    <ScrollView>
+        <FlexLayout
+            Direction="Column"
+            AlignContent="Center"
+            JustifyContent="Start"
+            FlexLayout.Grow="1"
+            Margin="30, 40">
+
+            <Label
+                Text="Aplicação Teste"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                TextColor="#333"
+                HorizontalOptions="Center"
+                FlexLayout.Basis="80"
+                FlexLayout.AlignSelf="Center"/>
+
+            <FlexLayout
+                Direction="Column"
+                FlexLayout.Grow="1"
+                JustifyContent="Center"
+                AlignContent="Center"
+                Margin="0, 0, 0, 50">
+
+                <FlexLayout
+                    Direction="Row"
+                    AlignItems="Center"
+                    JustifyContent="SpaceBetween"
+                    FlexLayout.Basis="80">
+                    <Label
+                        Text="ID:"
+                        SemanticProperties.HeadingLevel="Level2"
+                        FontSize="20"
+                        TextColor="#333"
+                            HorizontalOptions="Center"
+                        FlexLayout.Basis="Auto"/>
+
+                    <Entry
+                        x:Name="Id"
+                        Placeholder="Digite o Id"
+                        PlaceholderColor="#888"
+                                FlexLayout.Basis="80%"/>
+                </FlexLayout>
+
+                <FlexLayout
+                    Direction="Row"
+                    AlignItems="Center"
+                    JustifyContent="SpaceBetween"
+                    FlexLayout.Basis="80">
+                    <Label
+                        Text="Pass:"
+                        SemanticProperties.HeadingLevel="Level2"
+                        FontSize="20"
+                        TextColor="#333"
+                            FlexLayout.Basis="Auto"/>
+
+                    <Entry
+                        x:Name="Pass"
+                        Placeholder="Digite a senha"
+                        IsPassword="True"
+                        PlaceholderColor="#888"
+                                FlexLayout.Basis="80%"/>
+                </FlexLayout>
+            </FlexLayout>
+
+            <FlexLayout
+                Direction="Column"
+                JustifyContent="SpaceBetween"
+                FlexLayout.Basis="200">
+
+                <Button
+                    x:Name="BtnOk"
+                    Text="OK"
+                    BackgroundColor="#007acc"
+                        TextColor="White"
+                    SemanticProperties.Hint="Counts the number of times you click"
+                    Clicked="OnOkClicked"
+                    HorizontalOptions="Fill"/>
+
+                <Button
+                    x:Name="BtnLimpar"
+                    Text="Limpar"
+                    BackgroundColor="#007acc"
+                            TextColor="White"
+                    SemanticProperties.Hint="Counts the number of times you click"
+                    Clicked="OnCleanClicked"
+                    HorizontalOptions="Fill"/>
+
+                <Button
+                    x:Name="BtnCreditos"
+                    Text="Créditos"
+                    BackgroundColor="#007acc"
+                                TextColor="White"
+                    SemanticProperties.Hint="Counts the number of times you click"
+                    Clicked="OnAuthorsClicked"
+                    HorizontalOptions="Fill"/>
+            </FlexLayout>
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>
