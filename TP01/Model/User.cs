@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace TP01.Model
 {
+    // Alisson de Sousa Vieira
+    // Leonardo de Fontes
     public class User
     {
         public string Identifier { get; set; }

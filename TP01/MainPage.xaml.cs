@@ -1,6 +1,8 @@
 ﻿using TP01.Model;
 
 namespace TP01;
+// Alisson de Sousa Vieira
+// Leonardo de Fontes
 
 public partial class MainPage : ContentPage
 {
