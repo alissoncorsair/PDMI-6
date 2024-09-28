@@ -1,19 +1,17 @@
 ﻿using TP01.Model;
 
 namespace TP01;
-// Alisson de Sousa Vieira
-// Leonardo de Fontes
-
 public partial class MainPage : ContentPage
 {
     public MainPage()
 	{
 		InitializeComponent();
 	}
-
+    // Alisson de Sousa Vieira
+    // Leonardo de Fontes
     private async void OnOkClicked(object sender, EventArgs e)
     {
-        if (string.IsNullOrWhiteSpace(Id.Text) || string.IsNullOrWhiteSpace(Pass.Text))
+        if (string.IsNullOrWhiteSpace(UserId.Text) || string.IsNullOrWhiteSpace(Pass.Text))
         {
             await DisplayAlert("", "Preencha os campos!", "Ok");
             return;
@@ -21,7 +19,7 @@ public partial class MainPage : ContentPage
 
         var user = new User()
         {
-            Identifier = Id.Text,
+            Identifier = UserId.Text,
             Password = Pass.Text
         };
 
@@ -35,13 +33,13 @@ public partial class MainPage : ContentPage
     private void OnCleanClicked(object sender, EventArgs e)
     {
         Pass.Text = "";
-        Id.Text = "";
-        Id.Focus(); 
+        UserId.Text = "";
+        UserId.Focus(); 
     }
 
     private async void OnAuthorsClicked(object sender, EventArgs e)
     {
-        await DisplayAlert("Créditos", "Desenvolvido por: \nAlisson de Sousa Vieira e Leonardo de Fontes.", "OK");
+        await DisplayAlert("Créditos", "Alisson de Sousa Vieira e Leonardo de Fontes", "OK");
     }
 }
 

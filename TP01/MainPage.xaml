@@ -1,6 +1,4 @@
-﻿<!-- Alisson de Sousa Vieira -->
-<!-- Leonardo de Fontes -->
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TP01.MainPage"
@@ -43,7 +41,7 @@
                         FlexLayout.Basis="Auto"/>
 
                     <Entry
-                        x:Name="Id"
+                        x:Name="UserId"
                         Placeholder="Digite o Id"
                         PlaceholderColor="#888"
                                 FlexLayout.Basis="80%"/>
@@ -58,13 +56,13 @@
                         Text="Pass:"
                         SemanticProperties.HeadingLevel="Level2"
                         FontSize="20"
-                        TextColor="#333"
+                        TextColor="#333" 
                             FlexLayout.Basis="Auto"/>
 
                     <Entry
                         x:Name="Pass"
-                        Placeholder="Digite a senha"
                         IsPassword="True"
+                        Placeholder="Digite a senha"
                         PlaceholderColor="#888"
                                 FlexLayout.Basis="80%"/>
                 </FlexLayout>
