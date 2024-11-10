@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="TP02.Pages.EditPage"
+    Title="Editar">
+
+    <StackLayout Style="{StaticResource Container}">
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout>
+                <FlexLayout HeightRequest="50" Direction="Row" AlignItems="Center"
+                    JustifyContent="Center" Margin="0, 0, 0, 50">
+                    <Label Text="Editar Tarefa" FontAttributes="Bold" FontSize="Large" />
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Center"
+                    JustifyContent="Start">
+                    <Label Text="Título:" FontAttributes="Bold" FontSize="Subtitle"
+                        Margin="0, 0, 5, 0" />
+                    <Entry
+                        x:Name="txtTitle"
+                        WidthRequest="290"
+                        TextColor="{StaticResource Gray300}"
+                        Text="{Binding Title}" />
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Center"
+                    JustifyContent="Start">
+                    <Label Text="Descrição:" FontAttributes="Bold" FontSize="Subtitle"
+                        Margin="0, 0, 5, 0" />
+                    <Entry
+                        x:Name="txtDescription"
+                        WidthRequest="250"
+                        TextColor="{StaticResource Gray300}"
+                        Text="{Binding Description}" />
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Center"
+                    JustifyContent="Start">
+                    <Label Text="Data de Criação:" FontAttributes="Bold" FontSize="Subtitle"
+                        Margin="0, 0, 5, 0" />
+                    <DatePicker Grid.Row="5"
+                        x:Name="txtCreated"
+                        WidthRequest="200"
+                        Date="{Binding CreateAt}"
+                        TextColor="{StaticResource Gray300}" 
+                                 Format="dd/MM/yyyy" />
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Center"
+                    JustifyContent="Start">
+                    <Label Text="Prioridade:" FontAttributes="Bold" FontSize="Subtitle"
+                        Margin="0, 0, 5, 0" />
+                    <Picker
+                        x:Name="pickerPriority"
+                        WidthRequest="250"
+                        TextColor="{StaticResource Gray300}"
+                        ItemsSource="{Binding PriorityOptions}"
+                        SelectedItem="{Binding SelectedPriorityOption, Mode=TwoWay}" />
+
+
+                </FlexLayout>
+            </StackLayout>
+        </ScrollView>
+
+        <Button
+            Margin="0, 20, 0, 0"
+            Text="Salvar"
+            Clicked="onEdit" />
+        <Button
+            Style="{StaticResource BtnOutline}"
+            Margin="0, 20, 0, 0"
+            Text="Cancelar"
+            Clicked="onCancel" />
+    </StackLayout>
+</ContentPage>
