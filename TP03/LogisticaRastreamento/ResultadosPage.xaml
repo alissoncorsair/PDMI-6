@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LogisticaRastreamento"
+             x:Class="LogisticaRastreamento.ResultadosPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="CardStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=White, Dark=Black}" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Margin" Value="10" />
+                <Setter Property="Padding" Value="10" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <Frame Style="{StaticResource CardStyle}">
+            <StackLayout>
+                <Label Text="Detalhes do Pacote" FontSize="24" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                <Label Text="ID do Pacote: " />
+                <Label Text="{Binding Pacote.PacoteId}" FontAttributes="Bold" />
+                <Label Text="Status: " />
+                <Label Text="{Binding Pacote.Status}" FontAttributes="Bold" />
+                <Label Text="Data de Envio: " />
+                <Label Text="{Binding Pacote.DataEnvio}" FontAttributes="Bold" />
+                <Label Text="Data Prevista de Entrega: " />
+                <Label Text="{Binding Pacote.DataPrevistaEntrega}" FontAttributes="Bold" />
+            </StackLayout>
+        </Frame>
+        <Frame Style="{StaticResource CardStyle}">
+            <StackLayout>
+                <Label Text="Histórico de Eventos" FontSize="20" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+                <ListView ItemsSource="{Binding Pacote.HistoricoEventos}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Label Text="{Binding}" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Frame>
+
+        <Button Text="Voltar" Clicked="OnBackClicked" Margin="10,20,10,0" />
+    </StackLayout>
+</ContentPage>
