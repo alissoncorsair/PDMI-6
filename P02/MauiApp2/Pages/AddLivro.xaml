@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P02.Pages.AddLivro"
+             Title="AddLivro">
+
+    <StackLayout Style="{StaticResource Container}">
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout>
+                <FlexLayout HeightRequest="50" Direction="Row" AlignItems="Center" JustifyContent="Center" Margin="0, 0, 0, 50">
+                    <Label Text="Novo Livro" FontAttributes="Bold" FontSize="Large"/>
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Center" JustifyContent="Start" >
+                    <Label Text="Nome:" FontAttributes="Bold" FontSize="Subtitle" Margin="0, 0, 5, 0"/>
+                    <Entry
+                          x:Name="txtNome"
+                          WidthRequest="290"
+                          TextColor="{StaticResource Gray300}" />
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Center" JustifyContent="Start" >
+                    <Label Text="Autor:" FontAttributes="Bold" FontSize="Subtitle" Margin="0, 0, 5, 0"/>
+                    <Entry
+                       x:Name="txtAutor"
+                       WidthRequest="250"
+                       TextColor="{StaticResource Gray300}"  />
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Center" JustifyContent="Start" >
+                    <Label Text="Email:" FontAttributes="Bold" FontSize="Subtitle" Margin="0, 0, 5, 0"/>
+                    <Entry
+                       x:Name="txtEmail"
+                       WidthRequest="250"
+                       TextColor="{StaticResource Gray300}"  />
+                </FlexLayout>
+
+                <FlexLayout HeightRequest="80" Direction="Row" AlignItems="Center" JustifyContent="Start" >
+                    <Label Text="ISBN:" FontAttributes="Bold" FontSize="Subtitle" Margin="0, 0, 5, 0"/>
+                    <Entry
+                       x:Name="txtISBN"
+                       WidthRequest="250"
+                       TextColor="{StaticResource Gray300}"  />
+                </FlexLayout>
+            </StackLayout>
+        </ScrollView>
+
+        <Button
+              Margin="0, 20, 0, 0"
+              Text="Adicionar"
+              Clicked="onAdd"/>
+        <Button
+              Style="{StaticResource BtnOutline}"
+              Margin="0, 20, 0, 0"
+              Text="Cancelar"
+              Clicked="onCancel"/>
+    </StackLayout>
+</ContentPage>

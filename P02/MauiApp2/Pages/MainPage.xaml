@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P02.MainPage">
+
+    <StackLayout>
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout>
+                <ListView 
+                    x:Name="listLivros"
+                    RowHeight="60"
+                    VerticalOptions="End"
+                    HorizontalOptions="FillAndExpand">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell
+                                TextColor="{StaticResource Gray100}"
+                                DetailColor="Gray"
+                                Text="{Binding Nome}"
+                                Detail="{Binding Autor}"
+                                Tapped="OnOpenDetails"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    =
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+
+        <Button
+            Margin="0, 20, 0, 0"
+            Text="Novo livro"
+            Clicked="OnAddLivro"/>
+
+        <Button
+             Margin="0, 20, 0, 0"
+             Text="Creditos"
+             Clicked="OnCreditos"/>
+
+        <Button
+             Margin="0, 20, 0, 0"
+             Text="Coordenadas"
+             Clicked="OnCoordenadas"/>
+    </StackLayout>
+
+</ContentPage>

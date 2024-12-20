@@ -92,7 +92,7 @@ namespace LogisticaRastreamento.ViewModels
             else
             {
                 Pacote = null;
-                await Application.Current.MainPage.DisplayAlert("Pacote não encontrado", "Desculpe! O pacote não foi encontrado. Verifique o código digitado e tente novamente.", "Ok");
+                await Application.Current.MainPage.DisplayAlert("Pacote não encontrado", "O pacote não foi encontrado. Verifique o código digitado e tente novamente.", "Ok");
             }
         }
 

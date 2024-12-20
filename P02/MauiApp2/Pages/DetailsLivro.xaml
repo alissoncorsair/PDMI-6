@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="P02.Pages.DetailsLivro"
+             Title="DetailsLivro">
+    <StackLayout Padding="20">
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout Spacing="20">
+                <Label Text="Detalhes Livro" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" />
+
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label Text="Nome:" FontAttributes="Bold" FontSize="Subtitle" VerticalOptions="Center" />
+                    <Label x:Name="lblNome" Text="{Binding Nome}" FontSize="Body" VerticalOptions="Center" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label Text="Autor:" FontAttributes="Bold" FontSize="Subtitle" VerticalOptions="Center" />
+                    <Label x:Name="lblAutor" Text="{Binding Autor}" FontSize="Body" VerticalOptions="Center" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label Text="Email:" FontAttributes="Bold" FontSize="Subtitle" VerticalOptions="Center" />
+                    <Label x:Name="lblEmail" Text="{Binding Email}" FontSize="Body" VerticalOptions="Center" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label Text="ISBN:" FontAttributes="Bold" FontSize="Subtitle" VerticalOptions="Center" />
+                    <Label x:Name="lblISBN" Text="{Binding ISBN}" FontSize="Body" VerticalOptions="Center" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+        <Button
+            Margin="0, 20, 0, 0"
+            Text="Editar"
+            Clicked="OnEditarClick"/>
+        <Button
+            Style="{StaticResource BtnOutline}"
+            Margin="0, 20, 0, 0"
+            Text="Excluir"
+            Clicked="OnExcluirClick"/>
+    </StackLayout>
+</ContentPage>
